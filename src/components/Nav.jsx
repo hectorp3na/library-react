@@ -3,7 +3,7 @@ import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
+import { byPrefixAndName } from '@awesome.me/kit.fontawesome.com/333329989e/icons'
 
 const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
 
