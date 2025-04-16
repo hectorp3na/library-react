@@ -1,8 +1,13 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 
+const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
+
+ReactDOM.render(element, document.body)
 const Nav = ({ numberOfItems }) => {
   function openMenu() {
     document.body.classList += " menu--open";
@@ -30,11 +35,11 @@ const Nav = ({ numberOfItems }) => {
             </Link>
           </li>
           <button className="btn__menu" onClick={openMenu}>
-            <FontAwesomeIcon icon="bars" />
+          <FontAwesomeIcon icon="fa-solid fa-bars" />
           </button>
           <li className="nav__icon">
             <Link to="/cart" className="nav__link">
-              <FontAwesomeIcon icon="shopping-cart" />
+            <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
             </Link>
             {numberOfItems > 0 && (
               <span className="cart__length">{numberOfItems}</span>
@@ -44,7 +49,7 @@ const Nav = ({ numberOfItems }) => {
 
         <div className="menu__backdrop">
           <button className="btn__menu btn__menu--close" onClick={closeMenu}>
-            <FontAwesomeIcon icon="times" />
+          <FontAwesomeIcon icon="fa-solid fa-xmark" />
           </button>
           <ul className="menu__links">
             <li className="menu__list">
