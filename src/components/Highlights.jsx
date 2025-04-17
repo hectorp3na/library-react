@@ -1,13 +1,7 @@
 import Highlight from "./ui/Highlight";
 import React from "react";
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { byPrefixAndName } from '@awesome.me/kit.fontawesome.com/333329989e/icons'
-
-const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
-
-ReactDOM.render(element, document.body)
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faBookOpen, faTags } from '@fortawesome/free-solid-svg-icons'; 
 
 const Highlights = () => {
   return (
@@ -19,17 +13,17 @@ const Highlights = () => {
           </h2>
           <div className="highlight__wrapper">
             <Highlight
-              icon={<FontAwesomeIcon icon="fa-solid fa-bolt" />}
+              icon={<FontAwesomeIcon icon={faBolt} />} 
               title="Easy and Quick"
               para="Get access to the book you purchased online instantly."
             />
             <Highlight
-              icon={<FontAwesomeIcon icon="fa-solid fa-book-open" />}
+              icon={<FontAwesomeIcon icon={faBookOpen} />} 
               title="10,000+ Books"
               para="Library has books in all your favourite categories."
             />
             <Highlight
-              icon={<FontAwesomeIcon icon="fa-solid fa-tags" />}
+              icon={<FontAwesomeIcon icon={faTags} />} 
               title="Affordable"
               para="Get your hands on popular books for as little as $10."
             />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import BookInfo from "./pages/BookInfo";
@@ -80,15 +80,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
-        <Route path="/" exact component= {Home} />
-        <Route path="/books" exact render={() => <Books books={books} />} />
-        <Route
-          path="/books/1"
-          render={() => (
-            <BookInfo books={books} addItemToCart={addItemToCart} />
-          )}
-        />
+        <Nav numberOfItems={numberOfItems()} /> 
+        <Routes> 
+          <Route path="/" element={<Home />} /> 
+          <Route path="/books" element={<Books books={books} />} /> 
+          <Route
+            path="/books/:id" 
+            element={<BookInfo books={books} addItemToCart={addItemToCart} />}
+          />
+        </Routes>
         <Footer />
       </div>
     </Router>
